@@ -25,14 +25,14 @@
         <h2>Sandy Hook Elementary School</h2>
         20 children and 6 adults were taken on December 14, 2012.
         
-        <a class="btn" href="/incidents/sandy-hook-elementary-school/">Learn more »</a>
+        <a class="btn" href="/incidents/sandy-hook/">Learn more »</a>
         
         </div>
         <div class='span4'>
         <h2>Columbine High School</h2>
         12 students and 1 teacher were taken on April 20, 1999.
         
-        <a href='/incidents/columbine-high-school/' class='btn'>Learn more &raquo;</a></div>
+        <a href='/incidents/columbine/' class='btn'>Learn more &raquo;</a></div>
         <!--div class='span4'>
         <h2>September 11th</h2>
         20 children and 6 adults were taken on December 14, 2012.
