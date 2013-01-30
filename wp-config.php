@@ -14,24 +14,33 @@
  * @package WordPress
  */
 
-// ** MySQL settings - You can get this info from your web host ** //
-/** The name of the database for WordPress */
-define('DB_NAME', 'callgoo1_rememberthisname');
+if (isset($_SERVER["DATABASE_URL"])) {
+	$db = parse_url($_SERVER["DATABASE_URL"]);
+	define("DB_NAME", trim($db["path"],"/"));
+	define("DB_USER", $db["user"]);
+	define("DB_PASSWORD", $db["pass"]);
+	define("DB_HOST", $db["host"]);
+}
+else {
+	// ** MySQL settings - You can get this info from your web host ** //
+	/** The name of the database for WordPress */
+	define('DB_NAME', 'callgoo1_rememberthisname');
 
-/** MySQL database username */
-define('DB_USER', 'callgoo1_webuser');
+	/** MySQL database username */
+	define('DB_USER', 'callgoo1_webuser');
 
-/** MySQL database password */
-define('DB_PASSWORD', 'W3bus3r!');
+	/** MySQL database password */
+	define('DB_PASSWORD', 'W3bus3r!');
 
-/** MySQL hostname */
-define('DB_HOST', 'localhost');
+	/** MySQL hostname */
+	define('DB_HOST', 'localhost');
 
-/** Database Charset to use in creating database tables. */
-define('DB_CHARSET', 'utf8');
+	/** Database Charset to use in creating database tables. */
+	define('DB_CHARSET', 'utf8');
 
-/** The Database Collate type. Don't change this if in doubt. */
-define('DB_COLLATE', '');
+	/** The Database Collate type. Don't change this if in doubt. */
+	define('DB_COLLATE', '');
+}
 
 /**#@+
  * Authentication Unique Keys and Salts.
