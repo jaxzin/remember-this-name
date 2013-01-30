@@ -42,6 +42,11 @@ else {
 	define('DB_COLLATE', '');
 }
 
+/**
+ * Site info
+ */
+define('WP_SITEURL', 'http://' . $_SERVER['SERVER_NAME'] );
+
 /**#@+
  * Authentication Unique Keys and Salts.
  *
