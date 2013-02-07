@@ -5,7 +5,7 @@
 	
 	Version: 0.1
 	
-	Template: roots
+	Template: rememberthisname-roots
 */
 
 /* Add additional stylesheets below
@@ -378,6 +378,13 @@ li.marquee-section {
     /*background: #fff;*/
 
 }
+
+.mosaicItem {
+  width: 150px;
+  margin: 0px;
+  float: left;
+}
+
 /* Responsive Docs
 -------------------------------------------------- */
 @media (max-width: 480px) {
