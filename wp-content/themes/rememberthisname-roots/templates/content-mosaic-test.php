@@ -11,7 +11,7 @@
 		<div class="mosaicItem">
 			<a href="<?php the_permalink(); ?>">
 			<img src="<?php 
-					$image = wp_get_attachment_image_src(get_post_thumbnail_id());
+					$image = wp_get_attachment_image_src(get_post_thumbnail_id(), array(150,150));
 					if(is_array($image)) {
 						print $image[0]; 
 					}
