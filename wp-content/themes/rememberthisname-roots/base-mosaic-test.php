@@ -11,7 +11,6 @@
       get_template_part('templates/header');
     }
   ?>
-  <h1>base-mosaic-test</h1>
   <div id="wrap" class="container" role="document">
     <div id="content" class="row">
       <div id="main" class="<?php echo roots_main_class(); ?>" role="main">
