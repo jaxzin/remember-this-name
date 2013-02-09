@@ -2,16 +2,20 @@
   <article <?php post_class() ?> id="post-<?php the_ID(); ?>">
     <header>
       <h1 class="entry-title"><?php the_title(); ?></h1>
-      <?php get_template_part('templates/entry-meta'); ?>
         <div>
-          <strong>Date of Birth: </strong>
-          <?php echo esc_html( get_post_meta( get_the_ID(), 'rtn-date-of-birth', true ) ); ?>
-        </div>
-        <div>
-          <strong>Date of Death: </strong>
-          <?php echo esc_html( get_post_meta( get_the_ID(), 'rtn-date-of-death', true ) ); ?>
+          <?php $birth = get_post_meta( get_the_ID(), 'rtn-date-of-birth', true );
+                $death = get_post_meta( get_the_ID(), 'rtn-date-of-death', true );
+                if ( $birth != '' and $death != '' ) {
+                  echo esc_html( $birth );
+                  echo '-';
+                  echo esc_html( $death );
+                }
+          ?>
         </div>
     </header>
+    <div class="entry-featured-image">
+      <?php print wp_get_attachment_image(get_post_thumbnail_id(), 'medium'); ?>
+    </div>
     <div class="entry-content">
       <?php the_content(); ?>
     </div>
