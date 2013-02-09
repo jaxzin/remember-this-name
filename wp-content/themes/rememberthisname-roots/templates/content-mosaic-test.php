@@ -7,13 +7,14 @@
 
 	$media_query->query('showposts=20');
 
-	while ( $media_query->have_posts() ) : $media_query->the_post(); ?>
+	while ( $media_query->have_posts() ) : $media_query->the_post(); if ( has_post_thumbnail() ) { ?>
 		<div class="mosaicItem">
 			<a href="<?php the_permalink(); ?>">
 			<img src="<?php print wp_get_attachment_image_src(get_post_thumbnail_id())[0]; ?>" alt="<?php the_title(); ?>">
 			</a>
 		</div>
 	<?php
+	   }
 	endwhile;
 ?>
 </div>
