@@ -2,24 +2,19 @@
 <script src="/wp-content/themes/rememberthisname-roots/assets/js/vendor/jquery.masonry.min.js"></script>
 <div id="mosaic">
 <?php
-	$media_query = new WP_Query(
-	    array(
-	        'post_type' => 'attachment',
-	        'post_status' => 'inherit',
-	        'posts_per_page' => -1,
-	    )
-	);
-	$list = array();
-	foreach ($media_query->posts as $post) {
-	    $list[] = wp_get_attachment_image_src($post->ID, array(150,150))[0];
-	}
+	# Find all posts with images
+	$media_query = new WP_query();
 
-	foreach ( $list as $url)  { ?>
+	$media_query->query('showposts=20');
+
+	while ( $media_query->have_posts() ) : $media_query->the_post(); ?>
 		<div class="mosaicItem">
-			<img src="<?php print $url;?>">
+			<a href="<?php the_permalink(); ?>">
+			<img src="<?php print wp_get_attachment_image_src(get_post_thumbnail_id())[0]; ?>" alt="<?php the_title(); ?>">
+			</a>
 		</div>
 	<?php
-	}
+	endwhile;
 ?>
 </div>
 <script type="text/javascript">
@@ -28,7 +23,8 @@ var $container = $('#mosaic');
 $container.imagesLoaded( function(){
   $container.masonry({
     itemSelector : '.mosaicItem',
-    columnWidth: 150
+    columnWidth: 150,
+    isAnimated: true
   });
 });
 </script>
