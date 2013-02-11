@@ -4,3 +4,6 @@
 [submodule "lib/masonry"]
 	path = lib/masonry
 	url = git://github.com/desandro/masonry.git
+[submodule "lib/WP-More-Fields"]
+	path = lib/WP-More-Fields
+	url = git://github.com/rssready/WP-More-Fields.git
