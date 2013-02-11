@@ -1,5 +1,7 @@
-<script src="//ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<script src="/wp-content/themes/rememberthisname-roots/assets/js/vendor/jquery.masonry.min.js"></script>
+<script src="/assets/js/jquery/jquery.masonry.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.0/jquery-ui.min.js"></script>
+<script src="/assets/js/jquery/jquery.flip.min.js"></script>
+<script src="/assets/js/mosaic.js"></script>
 <div id="mosaic">
 <?php
 	# Find all posts with images
@@ -8,7 +10,7 @@
 	$media_query->query('showposts=20');
 
 	while ( $media_query->have_posts() ) : $media_query->the_post(); if ( has_post_thumbnail() ) { ?>
-		<div class="mosaicItem">
+		<div class="mosaicItem" data-name="<?php echo the_title();?>" data-url="<?php echo the_permalink();?>">
 			<a href="<?php the_permalink(); ?>">
 			<img src="<?php 
 					$image = wp_get_attachment_image_src(get_post_thumbnail_id(), array(150,150));
@@ -32,6 +34,10 @@ $container.imagesLoaded( function(){
     columnWidth: 150,
     isAnimated: true
   });
+});
+
+$container.imagesLoaded( function(){
+	setInterval(flipTile, 2000);
 });
 </script>
 
