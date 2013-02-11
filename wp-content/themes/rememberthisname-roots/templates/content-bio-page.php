@@ -22,11 +22,11 @@
       <?php the_content(); ?>
     </div>
     <div id="donations">
-      <?php $result = categoryCustomFields_GetCategoryCustomField(get_the_category()[0]->cat_ID,'donations'); 
+      <?php $cat = get_the_category(); $result = categoryCustomFields_GetCategoryCustomField($cat[0]->cat_ID,'donations'); 
             echo $result[0]->field_value;?>
     </div>
     <div id="causes">
-      <?php $result = categoryCustomFields_GetCategoryCustomField(get_the_category()[0]->cat_ID,'causes'); 
+      <?php $result = categoryCustomFields_GetCategoryCustomField($cat[0]->cat_ID,'causes'); 
             echo $result[0]->field_value;?>
     </div>
     <footer>
