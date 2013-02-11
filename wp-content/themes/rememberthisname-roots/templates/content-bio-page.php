@@ -20,14 +20,26 @@
     </div>
     <div class="entry-content note">
       <?php the_content(); ?>
-    </div>
-    <div id="donations">
-      <?php $cat = get_the_category(); $result = categoryCustomFields_GetCategoryCustomField($cat[0]->cat_ID,'donations'); 
-            echo $result[0]->field_value;?>
-    </div>
-    <div id="causes">
-      <?php $result = categoryCustomFields_GetCategoryCustomField($cat[0]->cat_ID,'causes'); 
-            echo $result[0]->field_value;?>
+      <div id="donations">
+        <h3>Donations and Charities</h3>
+        <div id="personal-donations">
+          <?php meta('donations'); ?>
+        </div>
+        <div id="group-donations">
+          <?php $cat = get_the_category(); $result = categoryCustomFields_GetCategoryCustomField($cat[0]->cat_ID,'donations'); 
+              echo $result[0]->field_value;?>
+        </div>
+      </div>
+      <div id="causes">
+        <h3>Causes and Communities</h3>
+        <div id="personal-causes">
+          <?php meta('causes'); ?>
+        </div>
+        <div id="group-causes">
+          <?php $result = categoryCustomFields_GetCategoryCustomField($cat[0]->cat_ID,'causes'); 
+              echo $result[0]->field_value;?>
+        </div>
+      </div>
     </div>
     <footer>
       <?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
