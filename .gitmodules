@@ -1,0 +1,3 @@
+[submodule "lib/jquery.flip"]
+	path = lib/jquery.flip
+	url = git@github.com:jaxzin/Flip-jQuery.git
