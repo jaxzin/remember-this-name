@@ -1,3 +1,6 @@
 [submodule "lib/jquery.flip"]
 	path = lib/jquery.flip
 	url = git@github.com:jaxzin/Flip-jQuery.git
+[submodule "lib/masonry"]
+	path = lib/masonry
+	url = git://github.com/desandro/masonry.git
