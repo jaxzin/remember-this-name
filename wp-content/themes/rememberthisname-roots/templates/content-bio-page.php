@@ -22,10 +22,12 @@
       <?php the_content(); ?>
     </div>
     <div id="donations">
-      <?php $result = categoryCustomFields_GetCategoryCustomField(get_the_category()[0]->cat_ID,'donations'); echo $result[0]->field_value;?>
+      <?php $result = categoryCustomFields_GetCategoryCustomField(get_the_category()[0]->cat_ID,'donations'); 
+            echo $result[0]->field_value;?>
     </div>
     <div id="causes">
-      <?php $result = categoryCustomFields_GetCategoryCustomField(get_the_category()[0]->cat_ID,'causes'); echo $result[0]->field_value;?>
+      <?php $result = categoryCustomFields_GetCategoryCustomField(get_the_category()[0]->cat_ID,'causes'); 
+            echo $result[0]->field_value;?>
     </div>
     <footer>
       <?php wp_link_pages(array('before' => '<nav id="page-nav"><p>' . __('Pages:', 'roots'), 'after' => '</p></nav>')); ?>
