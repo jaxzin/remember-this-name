@@ -37,7 +37,9 @@ $container.imagesLoaded( function(){
 });
 
 $container.imagesLoaded( function(){
-	setInterval(flipTile, 2000);
+	// Start up tile flipping animation, flip every 10s.
+	flipTile();
+	setInterval(flipTile, 10000);
 });
 </script>
 

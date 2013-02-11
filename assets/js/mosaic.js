@@ -1,18 +1,34 @@
 function flipTile() {
 	var $container = $('#mosaic');
-	$target = $container.children().first();
 
-	$target.flip({
-		color: '#610B21',
-		content:"<div style='width:300px;height:150px;color:white;font-size:18pt'><a href='"+$target.data('url')+"'>"+$target.data('name')+"</a></div>",
-		direction:"tb",
-		speed:250
-	});
+	// If there is already a tile flipped, reset it
+	$reset = $container.data('flipped');
+	if($reset) {
+		$reset.revertFlip();
+		$container.removeData('flipped');
+	}
 
-	$target.next().flip({
-		color: '#610B21',
-		content:"<div style='width:150px;height:150px;'></div>",
-		direction:"tb",
-		speed:250
-	});
+	// pick a random tile
+	$target = selectRandChild($container);
+
+	// Wait 0.5s to flip the next tile
+	setTimeout(
+		function() {
+			$target.flip({
+				color: '#111',
+				content:"<div style='width:300px;height:150px;color:white;'><a href='"+$target.data('url')+"'>"+$target.data('name')+"</a></div>",
+				direction:"tb",
+				speed:200
+			});
+			$container.data('flipped', $target);
+		}
+		, 500);
+}
+
+function selectRandChild($container) {
+	$children = $container.children();
+	var length = $children.length;
+	var ran = Math.floor(Math.random()*length);
+	// console.log("length:"+length+";ran:"+ran);
+	return $container.find("div:eq(" + ran + ")");
 }
