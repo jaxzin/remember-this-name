@@ -385,6 +385,23 @@ li.marquee-section {
   float: left;
 }
 
+.mosaicItemBack {
+    width: 150px;
+    height: 150px;
+    font-size: 20pt;
+    font-weight: 100;
+    padding: 5px 5px 5px 5px;
+    margin-right: -10px;
+    margin-bottom: -10px;
+    vertical-align: middle; 
+    line-height: 110%;
+    letter-spacing: 1px;
+}
+
+.mosaicItemBack a {
+    color: white;
+}
+
 /* Responsive Docs
 -------------------------------------------------- */
 @media (max-width: 480px) {

@@ -16,7 +16,7 @@ function flipTile() {
 		function() {
 			$target.flip({
 				color: '#111',
-				content:"<div style='width:300px;height:150px;color:white;'><a href='"+$target.data('url')+"'>"+$target.data('name')+"</a></div>",
+				content:"<div class='mosaicItemBack'><a href='"+$target.data('url')+"'>"+$target.data('name')+"</a></div>",
 				direction:"tb",
 				speed:200
 			});
