@@ -1,5 +1,5 @@
 <?php while (have_posts()) : the_post(); ?>
-  <article <?php post_class('vcard') ?> id="post-<?php the_ID(); ?>">
+  <article <?php post_class('vcard marketing') ?> id="post-<?php the_ID(); ?>">
     <header>
       <h1 class="entry-title fn"><?php the_title(); ?></h1>
         <div>
