@@ -403,6 +403,29 @@ li.marquee-section {
     color: white;
 }
 
+/* Bio Page */
+.entry-featured-image img {
+    display: block;
+    margin: 10px auto;
+}
+
+.lifetime {
+    margin: 5px 5px;
+    color: #CCC;
+    font-weight: 100;
+    letter-spacing: 1px;
+    text-align: center;
+}
+
+.lifetime time {
+    margin: 0px 5px;
+}
+
+.entry-content {
+    margin: 45px 0px;
+}
+
+
 /* Responsive Docs
 -------------------------------------------------- */
 @media (max-width: 480px) {

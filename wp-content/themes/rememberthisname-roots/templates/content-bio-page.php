@@ -2,15 +2,17 @@
   <article <?php post_class('vcard marketing') ?> id="post-<?php the_ID(); ?>">
     <header>
       <h1 class="entry-title fn"><?php the_title(); ?></h1>
-        <div>
+        <div class="lifetime">
           <?php $birth = get_post_meta( get_the_ID(), 'rtn-date-of-birth', true );
                 $birth = date('F j, Y', strtotime($birth));
                 $death = get_post_meta( get_the_ID(), 'rtn-date-of-death', true );
                 $death = date('F j, Y', strtotime($death));
                 if ( $birth != '' and $death != '' ) { ?>
-                  <time class="bday"><?php echo esc_html( $birth ); ?>
-                  -
-                  <time class="date-of-death"><?php echo esc_html( $death ); 
+                  <time class="bday"><?php 
+                    echo esc_html( $birth ); 
+                  ?></time>-<time class="date-of-death"><?php 
+                    echo esc_html( $death ); 
+                  ?></time><?php
                 }
           ?>
         </div>
