@@ -7,7 +7,12 @@
 	# Find all posts with images
 	$media_query = new WP_query();
 
-	$media_query->query('pages_per_post=20');
+	$media_query->query(
+		array(
+			'pages_per_post' => 20,
+			'meta_key' => '_thumbnail_id'
+			)
+	);
 
 	while ( $media_query->have_posts() ) : $media_query->the_post(); if ( has_post_thumbnail() ) { ?>
 		<div class="mosaicItem" data-name="<?php echo the_title();?>" data-url="<?php echo the_permalink();?>">
