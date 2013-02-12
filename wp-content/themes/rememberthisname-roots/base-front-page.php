@@ -21,29 +21,13 @@
         
         <section class="marketing" id="samples">
         <div class="row">
-        <div class="span4">
-        <h2>Sandy Hook Elementary School</h2>
-        20 children and 6 adults were taken on December 14, 2012.
+        <div class="span4 offset4">
+        <h2>Feedback</h2>
+        If you find something that needs to be fixed.
         
-        <a class="btn" href="/sandy-hook/">Learn more »</a>
-        
-        </div>
-        <div class='span4'>
-        <h2>Columbine High School</h2>
-        12 students and 1 teacher were taken on April 20, 1999.
-        
-        <a href='/columbine/' class='btn'>Learn more &raquo;</a></div>
-        <!--div class='span4'>
-        <h2>September 11th</h2>
-        20 children and 6 adults were taken on December 14, 2012.
-        
-        <a href='/sandyhook' class='btn'>Learn more &raquo;</a></div>
-        <div class='span4'>
-        <h2>Aurora</h2>
-        20 children and 6 adults were taken on December 14, 2012.
-        
-        <a href='/sandyhook' class='btn'>Learn more &raquo;</a>
-                </div-->
+        <a class="btn" href="mailto:feedback@rememberthisname.org">Contact Us »</a>
+
+        <a class="btn" href="https://github.com/jaxzin/remember-this-name">Contribute »</a>
         
         </div>
         </section>
