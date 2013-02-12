@@ -86,10 +86,12 @@
 }
 /* Marketing section of Overview
 -------------------------------------------------- */
-.marketing .row {
+.marketing .row,
+aside .row {
     margin-bottom: 9px;
 }
-.marketing h1 {
+.marketing h1,
+.sidebar h1 {
     margin: 36px 0 27px;
     font-size: 40px;
     font-weight: 300;
@@ -97,13 +99,18 @@
 }
 .marketing h2,
 .marketing h3,
-.marketing h4 {
+.marketing h4,
+aside h2,
+aside h3,
+aside h4 {
     font-weight: 300;
 }
-.marketing h2 {
+.marketing h2,
+aside h2 {
     font-size: 22px;
 }
-.marketing p {
+.marketing p,
+aside p {
     margin-right: 10px;
 }
 .marketing .bs-icon {
