@@ -2,9 +2,9 @@
 	$random_post = new WP_query(); 
 	$random_post->query('showposts=1&orderby=rand');
 	while ($random_post->have_posts()) : $random_post->the_post(); ?>
-    	<h1><a href="<?php the_permalink() ?>"><?php the_title() ?></a></h1>
+    	<h1><a href="<?php echo get_permalink() ?>"><?php the_title() ?></a></h1>
 	    <div class="entry-featured-image photo">
-	    	<a href="<?php the_permalink() ?>">
+	    	<a href="<?php echo get_permalink() ?>">
 		    	<?php print wp_get_attachment_image(get_post_thumbnail_id(), array(150,150)); ?>
 			</a>
 	    </div>
