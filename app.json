@@ -1,0 +1,39 @@
+{
+  "name": "remember-this-name",
+  "scripts": {
+  },
+  "env": {
+    "AWS_ACCESS_KEY_ID": {
+      "required": true
+    },
+    "AWS_SECRET_ACCESS_KEY": {
+      "required": true
+    },
+    "CLEARDB_DATABASE_URL": {
+      "required": true
+    },
+    "DATABASE_URL": {
+      "required": true
+    },
+    "MAILCHIMP_API_KEY": {
+      "required": true
+    },
+    "S3_BUCKET_NAME": {
+      "required": true
+    },
+    "SENDGRID_PASSWORD": {
+      "required": true
+    },
+    "SENDGRID_USERNAME": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "cleardb"
+  ],
+  "buildpacks": [
+
+  ]
+}
